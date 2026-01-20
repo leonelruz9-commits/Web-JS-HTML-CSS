@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nombre": "Submariner",
+    "marca": "Rolex",
+    "precio": 10500,
+    "descripcion": "Reloj de buceo profesional de lujo, resistente 300m.",
+    "imagen": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=400&h=400&fit=crop",
+    "categoria": "Lujo"
+  },
+  {
+    "id": 2,
+    "nombre": "G-Shock",
+    "marca": "Casio",
+    "precio": 89,
+    "descripcion": "Reloj resistente a impactos, ideal para deporte.",
+    "imagen": "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?w=400&h=400&fit=crop",
+    "categoria": "Deportivo"
+  },
+  {
+    "id": 3,
+    "nombre": "Watch Series 9",
+    "marca": "Apple",
+    "precio": 429,
+    "descripcion": "Smartwatch con monitorización avanzada de salud.",
+    "imagen": "https://files.refurbed.com/ii/apple-watch-series-9-alu-45mm-1694665625.jpg?t=fitdesign&h=600&w=800",
+    "categoria": "Smartwatch"
+  },
+  {
+    "id": 4,
+    "nombre": "Presage",
+    "marca": "Seiko",
+    "precio": 450,
+    "descripcion": "Reloj elegante con esfera texturizada tipo cóctel.",
+    "imagen": "https://www.seikowatches.com/pt-pt/-/media/Images/GlobalEn/Seiko/Home/products/presage/core_design/series_classic-series.jpg?mh=500&mw=900&hash=F0BD1E3FD810F574F3E7F109DEFCFDDE",
+    "categoria": "Elegante"
+  },
+  {
+    "id": 5,
+    "nombre": "Seamaster",
+    "marca": "Omega",
+    "precio": 5600,
+    "descripcion": "Reloj de buceo profesional, famoso por James Bond.",
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzo_1UZ4ZZDjP3l_GECPlCDXn6nxkfvhMpQQ&s",
+    "categoria": "Lujo"
+  },
+  {
+    "id": 6,
+    "nombre": "Gen 6",
+    "marca": "Fossil",
+    "precio": 299,
+    "descripcion": "Smartwatch con Wear OS y funciones de bienestar.",
+    "imagen": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+    "categoria": "Smartwatch"
+  }
+]

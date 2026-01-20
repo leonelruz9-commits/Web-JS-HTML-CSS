@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo_final_JS_Presupuesto</title>
+    <!--Fonts Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+        <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+ <div class="container">
+    <nav class="nav-main">
+        <img src="../img/nav-brand.png" alt="Logo Relojeria" class="nav-brand">
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="../index.html">Inicio</a></li>
+            <li class="nav-item">
+                <a href="presupuesto.html">Presupuesto</a></li>
+            <li class="nav-item">
+                <a href="contacto.html">Contacto</a></li>
+            <li class="nav-item">
+                <a href="galeria.html">Galeria</a></li>
+        </ul>
+    </nav>
+    <hr>
+           <!-- CONTACT FORM -->
+     <section class="contact-form">
+        <h2>Datos</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+               <div class="form-group">
+                <label for="surname">Apellidos:</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+               <div class="form-group">
+                <label for="phone">Teléfono de contacto:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        </form>
+     </section>
+     <!-- BUDGET CALCULATOR -->
+     <section class="contact-form">
+        <h2>Presupuesto</h2>
+        <form id="budgetForm">
+            <div class="form-group">
+                <label for="product">Producto:</label>
+                <select id="product" name="product">
+                    <option value="basico" data-price="100">Reloj Básico - 100€</option>
+                    <option value="intermedio" data-price="200">Reloj Intermedio - 200€</option>
+                    <option value="premium" data-price="300">Reloj Premium - 300€</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="plazo">Plazo (meses):</label>
+                <input type="number" id="plazo" name="plazo" min="1" value="1">
+            </div>
+            <div class="form-group">
+                <label>Extras:</label>
+                <div>
+                    <input type="checkbox" id="extra1" name="extras" value="grabado" data-price="50"> Grabado personalizado - 50€<br>
+                    <input type="checkbox" id="extra2" name="extras" value="caja" data-price="30"> Caja de regalo - 30€<br>
+                    <input type="checkbox" id="extra3" name="extras" value="garantia" data-price="20"> Garantía extendida - 20€
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Presupuesto Total:</label>
+                <span id="total">100€</span>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">Acepto los <a href="#" target="_blank">términos y condiciones</a></label>
+            </div>
+            <button type="submit" class="btn">Solicitar Presupuesto</button>
+        </form>
+        <div id="formMessage"></div>
+     </section>
+      </section>
+     <!--SOCIAL-->
+     <section class="social">
+        <p>Follow us in our social media!</p>
+        <div class="links">
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+     </section>
+
+     
+
+ </div>
+
+ <div class="footer-links">
+    <div class="footer-container">
+        <ul>
+            <li>
+                <a href="#">
+                    <h3>Titulo</h3>
+                </a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#">
+                    <h3>Titulo</h3>
+                </a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#">
+                    <h3>Titulo</h3>
+                </a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#">
+                    <h3>Titulo</h3>
+                </a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+            <li>
+                <a href="#">Relojes</a>
+            </li>
+        </ul>
+    </div>
+ </div>
+
+ <footer class="footer">
+    <p>&copy; 2024 Relojeria. Todos los derechos reservados.</p>
+</footer>
+
+<!--Scroll Reveal-->
+<script src="https://unpkg.com/scrollreveal"></script>
+<!--Custom JS-->
+<script src="../js/main.js"></script>
+
+    
+</body>
+</html>

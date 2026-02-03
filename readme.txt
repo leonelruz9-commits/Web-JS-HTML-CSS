@@ -1,3 +1,6 @@
+## Repositorio: https://github.com/leonelruz9-commits/Web-JS-HTML-CSS
+## Hosting: https://leonelruz9-commits.github.io/Web-JS-HTML-CSS/
+
 # Relojeria MARACAIBO - Sitio Web
 
 ## Descripción

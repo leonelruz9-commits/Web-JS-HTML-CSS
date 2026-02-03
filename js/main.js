@@ -65,8 +65,20 @@ document.addEventListener('DOMContentLoaded', function() {
             const phone = document.getElementById('phone').value;
             const email = document.getElementById('email').value;
             
-            if (!name || !surname || !phone || !email) {
-                showMessage('Por favor, completa todos los campos de contacto.', 'error');
+            if (!name) {
+                showMessage('Por favor, ingresa tu nombre.', 'error');
+                return;
+            }
+            if (!surname) {
+                showMessage('Por favor, ingresa tus apellidos.', 'error');
+                return;
+            }
+            if (!phone) {
+                showMessage('Por favor, ingresa tu teléfono.', 'error');
+                return;
+            }
+            if (!email) {
+                showMessage('Por favor, ingresa tu email.', 'error');
                 return;
             }
             

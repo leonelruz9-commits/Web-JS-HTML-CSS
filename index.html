@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
+<!-- Cabecera del documento -->
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabajo_final_JS</title>
-    <!--Fonts Awesome -->
+    <!-- Fuentes de iconos Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <!-- Google Fonts -->
+    <!-- Fuentes de Google -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
+    <!-- Hoja de estilos personalizada -->
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
 
+    <!-- Botón del menú móvil -->
     <div class="menu-btn">
         <i class="fas fa-bars"></i>
     </div>
 
+ <!-- Contenedor principal -->
  <div class="container">
+    <!-- Barra de navegación -->
     <nav class="nav-main">
         <img src="img/nav-brand.png" alt="Logo Relojeria" class="nav-brand">
         <ul class="nav-menu">
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a href="index.html">Inicio</a></li>
             <li class="nav-item">
                 <a href="view/presupuesto.html">Presupuesto</a></li>
@@ -38,33 +42,35 @@
     </nav>
     <hr>
 
-    <!-- SHOWCASE -->
+    <main>
+    <h1>Inicio</h1>
+    <!-- SECCIÓN PRINCIPAL -->
     <header class="showcase" id="showcase">
-    <h2>Relojeria MARACAIBO</h2>
+    <h1>Relojeria MARACAIBO</h1>
     <p>La mejor calidad en relojes de lujo</p>
     <a href="view/galeria.html" class="btn">Ver Productos<i class="fas fa-angle-double-right"></i></a>
     </header>
 
-    <!-- NEWS -->
+    <!-- NOTICIAS -->
      <div class="news-cards">
-        <img src="img/showcase_2.gif" alt="#"/>
-        <h3>James Bond 007 No Time To Die Omega Seamaster</h3>
+        <img src="img/showcase_2.gif" alt="Luxury Omega Seamaster watch with blue dial and black rubber strap on wet surface with water droplets, embodying elegance and precision in premium watchmaking">
+        <h2>James Bond 007 No Time To Die Omega Seamaster</h2>
         <p>Descubre la ultima noticia de los relojes inteligentes con tecnologia de punta.</p>
         <a href="https://www.strapcode.com/es/blogs/omega-watches/omega-seamaster-007-edition-the-best-strap-pairings-for-the-bond-watch">Learn More <i class="fas fa-angle-double-right"></i></a>
 
      </div>
      
      <div class="news-cards">
-        <img src="img/showcase_3.gif" alt="#"/>
-        <h3>Todas las veces en las que Grand Seiko ha plasmado la naturaleza de Japón en sus relojes este año</h3>
+        <img src="img/showcase_3.gif" alt="Grand Seiko luxury watch with silver metal case and exposed mechanical movement visible through transparent case back, showing intricate gears and balance wheel, displayed against dark blurred background, embodying precision Japanese craftsmanship and timeless elegance">
+        <h2>Todas las veces en las que Grand Seiko ha plasmado la naturaleza de Japón en sus relojes este año</h2>
         <p>Descubre las ultimas noticias de relojes clasicos atemporales.</p>
         <a href="https://www.revistagq.com/articulo/todas-las-veces-en-las-que-grand-seiko-ha-plasmado-la-naturaleza-de-japon-en-sus-relojes-este-ano">Learn More <i class="fas fa-angle-double-right"></i></a>
 
      </div>
-     <!--JSON NEWS-->
+     <!-- NOTICIAS DESDE JSON -->
      <div class="news-cards" id="news-json">
      </div>
-     <!--BANNER-->
+     <!-- BANNER PROMOCIONAL -->
      <section class="cards-banner-one"> 
         <div class="content">
             <h2>Ofertas Especiales</h2>
@@ -74,26 +80,28 @@
         </div>
 
      </section>
-     <!--SOCIAL-->
-     <section class="social">
-        <p>Follow us in our social media!</p>
+     <!-- REDES SOCIALES -->
+     <div class="social">
+        <p>¡Síguenos en nuestras redes sociales!</p>
         <div class="links">
-            <a href="#">
+            <a href="https://facebook.com/relojeriamaracaibo">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#">
+            <a href="https://twitter.com/relojeriamaracaibo">
                 <i class="fab fa-twitter"></i>
             </a>
-            <a href="#">
+            <a href="https://instagram.com/relojeriamaracaibo">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
-     </section>
+     </div>
 
      
 
+ </main>
  </div>
 
+ <!-- Enlaces adicionales en el pie de página -->
  <div class="footer-links">
     <div class="footer-container">
         <ul>
@@ -175,13 +183,17 @@
     </div>
  </div>
 
+ <!-- Información de copyright -->
  <footer class="footer">
-    <p>&copy; 2024 Relojeria. Todos los derechos reservados.</p>
+    <p>&copy; 2024 Relojeria MARACAIBO. Todos los derechos reservados.</p>
+    <p>Dirección: Calle Ficticia 123, Maracaibo, Venezuela</p>
+    <p>Teléfono: +58 261 123 4567 | Email: info@relojeriamaracaibo.com</p>
+    <p>Aviso legal: Este sitio es ficticio y no representa una empresa real.</p>
 </footer>
 
-<!--Scroll Reveal-->
+<!-- Biblioteca Scroll Reveal -->
 <script src="https://unpkg.com/scrollreveal"></script>
-<!--Custom JS-->
+<!-- JavaScript personalizado -->
 <script src="js/main.js"></script>
 
 </body>

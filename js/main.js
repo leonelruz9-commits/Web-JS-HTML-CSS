@@ -22,7 +22,7 @@ async function mostrarRelojes() {
     const contenedor = document.getElementById('news-json');
     if (contenedor) {
         try {
-            const response = await fetch('../data/noticias.json');
+            const response = await fetch('../../data/noticias.json');
             const data = await response.json();
             let html = '';
             data.forEach(item => {
@@ -104,9 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // Simulate form submission (since no backend)
             showMessage('¡Presupuesto solicitado exitosamente! Te contactaremos pronto.', 'success');
             // Optionally reset forms
-            // document.getElementById('contactForm').reset();
-            // budgetForm.reset();
-            // calculateTotal();
+            document.getElementById('contactForm').reset();
+            budgetForm.reset();
+            calculateTotal();
         });
     }
 });

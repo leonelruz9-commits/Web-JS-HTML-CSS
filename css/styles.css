@@ -8,7 +8,7 @@
 body {
     width: 100%;
      height: 100%;
-    background-image: repeating-radial-gradient(  #242c8491 87%,#1417d3 90%);
+    background-image: repeating-radial-gradient(  #0f3aa7bd 87%,#0d0c65 90%);
     background-size: 50px 50px;
     font-size: 16px;
     font-family: 'Lato', sans-serif;
@@ -520,7 +520,7 @@ hr{
 }
 
 
-/* Responsive for mapa */
+
 @media (max-width: 700px) {
     .mapa {
         margin-left: 200px;
@@ -535,6 +535,10 @@ hr{
 }
 
 /* Swiper */
+.swiper{
+    background-color: #0d0c65;
+}
+
 .swiper {
     width: 100%;
     height: 450px;

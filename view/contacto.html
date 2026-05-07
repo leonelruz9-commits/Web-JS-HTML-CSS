@@ -7,10 +7,10 @@
     <title>Trabajo_final_JS_Contacto</title>
     <!-- Fuentes de iconos Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <!-- Fuentes de Google -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" >
+    <!-- Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" >
     <!-- Hoja de estilos personalizada -->
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -36,149 +36,144 @@
                 <a href="galeria.html">Galeria</a></li>
         </ul>
     </nav>
+ </div>
     <hr>
 
     <main>
-    <div class="titulos">
-        <h1>Contacto</h1>
-    </div>
-    <hr>
-<!-- Mapa dinámico -->
-<div class="mapa">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.9954092569847!2d-8.612704788340404!3d41.156451510168324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2465a0593b536b%3A0xf3cbe72a79346d8!2sAcademia%20de%20Oposiciones%20y%20Cursos%20%7C%20MasterD%20Porto!5e0!3m2!1ses!2spt!4v1771561100327!5m2!1ses!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-<hr>
 
- <!-- Datos de contacto -->
-<div class="datos">
-    <p>Teléfono de contacto: +58 261 123 4567</p><hr>
-    <p>Email: info@relojeriamaracaibo.com</p><hr>
-    <p>Dirección: Calle Ficticia 123, Maracaibo, Venezuela</p><hr>
-    <p>Horario de atención: Lunes a Viernes 9:00 - 18:00</p><hr>
-    <p>Puedes encontrarnos presencialmente en nuestra tienda.</p>
-</div>
-<hr>
-
-     <!--BANNER-->
-     <section class="cards-banner-one"> 
-        <div class="content">
-            <h2>Ofertas Especiales</h2>
-            <p>Aprovecha nuestras ofertas exclusivas por tiempo</p>
-            <p>limitado en relojes de lujo seleccionados.</p>
-            <a href="presupuesto.html" class="btn-banner">Comprar Ahora <i class="fas fa-angle-double-right"></i></a>
+        <div class="titulos">
+            <h1>Contacto</h1>
         </div>
-
-     </section>
-     <!-- REDES SOCIALES -->
-     <div class="social">
-        <p>¡Síguenos en nuestras redes sociales!</p>
-        <div class="links">
-            <a href="https://facebook.com/relojeriamaracaibo">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com/relojeriamaracaibo">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://instagram.com/relojeriamaracaibo">
-                <i class="fab fa-instagram"></i>
-            </a>
+            <hr>
+            <!-- Contenedor del mapa interactivo -->
+         <div id="mapa" style="width: 100%; height: 450px; border-radius: 12px; margin: 20px 0;">
+         <p id="estado-ruta" style="text-align:center; color: #888; font-size: 0.9rem;">
+            Calculando tu ubicación para mostrar la ruta...
+            </p>
         </div>
-     </div>
+        <hr>
+
+            <!-- Datos de contacto -->
+        <div class="datos">
+            <p>Teléfono de contacto: +58 261 123 4567</p><hr>
+            <p>Email: info@relojeriamaracaibo.com</p><hr>
+            <p>Dirección: Calle Ficticia 123, Maracaibo, Venezuela</p><hr>
+            <p>Horario de atención: Lunes a Viernes 9:00 - 18:00</p><hr>
+            <p>Puedes encontrarnos presencialmente en nuestra tienda.</p>
+        </div>
+        <hr>
+
+                <!--BANNER-->
+        <section class="cards-banner-one"> 
+            <div class="content">
+                <h2>Ofertas Especiales</h2>
+                <p>Aprovecha nuestras ofertas exclusivas por tiempo</p>
+                <p>limitado en relojes de lujo seleccionados.</p>
+                <a href="presupuesto.html" class="btn-banner">Comprar Ahora <i class="fas fa-angle-double-right"></i></a>
+            </div>
+
+        </section>
+            <!-- REDES SOCIALES -->
+            <div class="social">
+                <p>¡Síguenos en nuestras redes sociales!</p>
+                    <div class="links">
+                        <a href="https://facebook.com/relojeriamaracaibo">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/relojeriamaracaibo">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/relojeriamaracaibo">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+            </div>
  </main>
- </div>
 
- <div class="footer-links">
-    <div class="footer-container">
-        <ul>
-            <li>
-                <a href="#">
-                    <h3>Titulo</h3>
-                </a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="#">
-                    <h3>Titulo</h3>
-                </a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="#">
-                    <h3>Titulo</h3>
-                </a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="#">
-                    <h3>Titulo</h3>
-                </a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-            <li>
-                <a href="#">Relojes</a>
-            </li>
-        </ul>
-    </div>
- </div>
 
- <footer class="footer">
-    <p>&copy; 2024 Relojeria MARACAIBO. Todos los derechos reservados.</p>
-    <p>Dirección: Calle Ficticia 123, Maracaibo, Venezuela</p>
-    <p>Teléfono: +58 261 123 4567 | Email: info@relojeriamaracaibo.com</p>
-    <p>Aviso legal: Este sitio es ficticio y no representa una empresa real.</p>
-</footer>
+ 
+    <footer class="footer">
 
-<!-- Biblioteca Scroll Reveal -->
-<script src="https://unpkg.com/scrollreveal"></script>
-<!-- JavaScript personalizado -->
-<script src="../js/main.js"></script>
+        <p>&copy; 2024 Relojeria MARACAIBO. Todos los derechos reservados.</p>
+        <p>Dirección: Calle Ficticia 123, Maracaibo, Venezuela</p>
+        <p>Teléfono: +58 261 123 4567 | Email: info@relojeriamaracaibo.com</p>
+        <p>Aviso legal: Este sitio es ficticio y no representa una empresa real.</p>
+    </footer>
+
+    <!-- Biblioteca Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- JavaScript personalizado -->
+    <script src="../js/main.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Leaflet Routing Machine -->
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+
+    <script>
+  // ====================================================
+  // MAPA CON LEAFLET + CÁLCULO DE RUTA AL CLIENTE
+  // ====================================================
+
+  // 1. Coordenadas de la tienda (ficticia en Oporto, donde está la academia)
+  const tiendaLat = 41.1564;
+  const tiendaLng = -8.6127;
+
+  // 2. Crear el mapa centrado en la tienda
+  const mapa = L.map('mapa').setView([tiendaLat, tiendaLng], 14);
+
+  // 3. Añadir capa de OpenStreetMap (gratuito, sin API key)
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(mapa);
+
+  // 4. Marcador de la tienda
+  const marcadorTienda = L.marker([tiendaLat, tiendaLng])
+    .addTo(mapa)
+    .bindPopup('<b>Relojeria MARACAIBO</b><br>Calle Ficticia 123')
+    .openPopup();
+
+  // 5. Pedir la ubicación del usuario y calcular la ruta
+  const estadoTexto = document.getElementById('estado-ruta');
+
+  if (navigator.geolocation) {
+    // El navegador preguntará al usuario si permite compartir ubicación
+    navigator.geolocation.getCurrentPosition(
+      function(posicion) {
+        // Si el usuario acepta, calculamos la ruta
+        const userLat = posicion.coords.latitude;
+        const userLng = posicion.coords.longitude;
+
+        estadoTexto.textContent = '✅ Ruta calculada desde tu ubicación actual.';
+
+        // Añadir marcador del usuario
+        L.marker([userLat, userLng])
+          .addTo(mapa)
+          .bindPopup('<b>Tu ubicación</b>')
+          .openPopup();
+
+        // Calcular y dibujar la ruta con OSRM (gratuito, sin API key)
+        L.Routing.control({
+          waypoints: [
+            L.latLng(userLat, userLng),   // Origen: usuario
+            L.latLng(tiendaLat, tiendaLng) // Destino: tienda
+          ],
+          language: 'es',
+          routeWhileDragging: false,
+          show: true,
+          lineOptions: {
+            styles: [{ color: '#c9a84c', weight: 5 }]  // color dorado de tu marca
+          }
+        }).addTo(mapa);
+      },
+      function(error) {
+        // Si el usuario rechaza o hay error, mostramos solo la tienda
+        estadoTexto.textContent = '📍 Activa la ubicación en tu navegador para ver la ruta hasta nosotros.';
+      }
+    );
+  } else {
+    estadoTexto.textContent = 'Tu navegador no soporta geolocalización.';
+  }
+    </script>
 
 </body>
 </html>

@@ -143,59 +143,34 @@ function showMessage(text, type) {
     messageDiv.style.color = type === 'success' ? '#4CAF50' : '#f44336';
 }
 
-// Gallery loader for galeria.html
-if (document.querySelector('.swiper')) {
-    function cargarGaleria() {
-        const wrapper = document.querySelector('.swiper-wrapper');
-        // Static slides with placeholder images
-        let slides = `
-            <div class="swiper-slide">
-                <img src="../img/swiper.png" alt="Imagen 1">
-                <h3>Casio</h3>
-                <p>Reloj basico</p>
-            </div>
-            <div class="swiper-slide">
-                <img src="../img/swiper_2.png" alt="Imagen 2">
-                <h3>Seiko</h3>
-                <p>Reloj intermedio</p>
-            </div>
-            <div class="swiper-slide">
-                <img src="../img/swiper_3.png" alt="Imagen 3">
-                <h3>Rolex</h3>
-                <p>Reloj de lujo</p>
-            </div>
-        `;
-        wrapper.innerHTML = slides;
-        
-        // Initialize Swiper
-        if (typeof Swiper !== 'undefined') {
-            try {
-                const swiper = new Swiper('.swiper', {
-                    direction: 'horizontal',
-                    loop: true,
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                    scrollbar: {
-                        el: '.swiper-scrollbar',
-                    },
-                    autoplay: {
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    },
-                });
-            } catch (error) {
-                console.error('Error initializing Swiper:', error);
-            }
-        } else {
-            console.error('Swiper library not loaded');
-        }
-    }
-    cargarGaleria();
-}
-
+// En main.js — imágenes de galería con URLs de Unsplash (libres de uso)
+const galeriaImages = [
+  {
+    src: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800",
+    alt: "Reloj de lujo dorado sobre fondo oscuro"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=800",
+    alt: "Reloj clásico de caballero plateado"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=800",
+    alt: "Reloj deportivo con cronógrafo"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=800",
+    alt: "Colección de relojes de pulsera"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1539874754764-5a96559165b0?w=800",
+    alt: "Reloj de dama con brazalete plateado"
+  },
+  {
+    src: "img/showcase_2.gif",
+    alt: "Omega Seamaster 007"
+  },
+  {
+    src: "img/showcase_3.gif",
+    alt: "Grand Seiko edición especial"
+  }
+];

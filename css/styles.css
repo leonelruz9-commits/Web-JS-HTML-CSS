@@ -602,3 +602,45 @@ hr{
 .titulos{
     color: #ccc;
 }
+
+/* ===== NAVBAR: página activa ===== */
+.nav-item.active > a {
+  color: #c9a84c;           
+  border-bottom: 2px solid #c9a84c;
+  font-weight: 700;
+}
+
+
+.about-section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about-section h2 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: hsl(0, 0%, 0%);
+  margin-bottom: 30px;
+}
+.about-features {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+.about-features li {
+  font-size: 1rem;
+  color: #000000;
+}
+.about-features li i {
+  color: #c9a84c;  /* tu color dorado */
+  margin-right: 8px;
+}
+

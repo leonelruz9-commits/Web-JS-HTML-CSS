@@ -42,64 +42,74 @@
         <h1>Presupuesto</h1>
     </div>
     <hr>
-           <!-- CONTACT FORM -->
-     <section class="contact-form">
-        <h2>Datos</h2>
-        <form id="contactForm">
-            <div class="form-group">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
+    <!-- UN SOLO FORMULARIO dividido en dos partes con fieldset -->
+<form id="presupuestoForm">
+
+    <!-- PARTE 1: DATOS DE CONTACTO -->
+    <fieldset>
+        <legend class="leyenda"><h2>Datos de contacto</h2></legend>
+        <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" maxlength="15" required>
+        </div>
+        <div class="form-group">
+            <label for="surname">Apellidos:</label>
+            <input type="text" id="surname" name="surname" maxlength="40" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Teléfono de contacto:</label>
+            <input type="tel" id="phone" name="phone" maxlength="9" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+    </fieldset>
+
+    <!-- PARTE 2: PRESUPUESTO -->
+    <fieldset>
+        <legend class="leyenda">Presupuesto</legend>
+        <div class="form-group">
+            <label for="product">Producto:</label>
+            <select id="product" name="product">
+                <option value="basico" data-price="100">Reloj Básico — 100€</option>
+                <option value="intermedio" data-price="200">Reloj Intermedio — 200€</option>
+                <option value="premium" data-price="300">Reloj Premium — 300€</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="plazo">Plazo (meses):</label>
+            <input type="number" id="plazo" name="plazo" min="1" max="36" value="1">
+        </div>
+        <div class="form-group">
+            <label>Extras:</label>
+            <div>
+                <input type="checkbox" id="extra1" name="extras" value="grabado" data-price="50">
+                <label for="extra1">Grabado personalizado — 50€</label><br>
+                <input type="checkbox" id="extra2" name="extras" value="caja" data-price="30">
+                <label for="extra2">Caja de regalo — 30€</label><br>
+                <input type="checkbox" id="extra3" name="extras" value="garantia" data-price="20">
+                <label for="extra3">Garantía extendida — 20€</label>
             </div>
-               <div class="form-group">
-                <label for="surname">Apellidos:</label>
-                <input type="text" id="surname" name="surname" required>
-            </div>
-               <div class="form-group">
-                <label for="phone">Teléfono de contacto:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-        </form>
-     </section>
-     <!-- BUDGET CALCULATOR -->
-     <section class="contact-form">
-        <h2>Presupuesto</h2>
-        <form id="budgetForm">
-            <div class="form-group">
-                <label for="product">Producto:</label>
-                <select id="product" name="product">
-                    <option value="basico" data-price="100">Reloj Básico - 100€</option>
-                    <option value="intermedio" data-price="200">Reloj Intermedio - 200€</option>
-                    <option value="premium" data-price="300">Reloj Premium - 300€</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="plazo">Plazo (meses):</label>
-                <input type="number" id="plazo" name="plazo" min="1" value="1">
-            </div>
-            <div class="form-group">
-                <label>Extras:</label>
-                <div>
-                    <input type="checkbox" id="extra1" name="extras" value="grabado" data-price="50"> Grabado personalizado - 50€<br>
-                    <input type="checkbox" id="extra2" name="extras" value="caja" data-price="30"> Caja de regalo - 30€<br>
-                    <input type="checkbox" id="extra3" name="extras" value="garantia" data-price="20"> Garantía extendida - 20€
-                </div>
-            </div>
-            <div class="form-group">
-                <label>Presupuesto Total:</label>
-                <span id="total">100€</span>
-            </div>
-            <div class="form-group">
-                <input type="checkbox" id="terms" name="terms">
-                <label for="terms">Acepto los <a href="#" target="_blank">términos y condiciones</a></label>
-            </div>
-            <button type="submit" class="btn">Solicitar Presupuesto</button>
-        </form>
-        <div id="formMessage"></div>
-     </section>
+        </div>
+        <div class="form-group">
+            <label>Presupuesto total:</label>
+            <span id="total">100€</span>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="terms" name="terms">
+            <label for="terms">He leído y acepto los 
+                <a href="#" target="_blank">términos y condiciones</a>
+            </label>
+        </div>
+
+        <!-- Botón enviar (obligatorio) + botón reset (opcional pero suma) -->
+        <button type="submit" class="btn">Solicitar Presupuesto</button>
+        <button type="reset" class="btn" id="resetBtn">Resetear</button>
+    </fieldset>
+
+</form>
+<div id="formMessage"></div>
      <!-- REDES SOCIALES -->
      <div class="social">
         <p>¡Síguenos en nuestras redes sociales!</p>

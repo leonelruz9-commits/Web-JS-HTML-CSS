@@ -30,6 +30,10 @@ ul {
 
 /* Navigation styles */
 .nav-main{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #0d0c65;
     font-size: 17px;
     display: flex;
     justify-content: space-between;
@@ -162,14 +166,14 @@ hr{
 
 .news-cards a{
     padding: 10px 0;
-    color: white;
+    color: rgb(255, 255, 255);
     text-transform:uppercase;
     display: inline-block;
     font-weight: bold;
 }
 
 .news-cards a:hover{
-    color: rgba(0, 0, 255, 0.578);
+    color: rgba(217, 255, 0, 0.578);
     transition: color 0.3s ease;
 
 }
@@ -624,7 +628,7 @@ hr{
 .about-section p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
   margin-bottom: 30px;
 }
 .about-features {
@@ -637,10 +641,29 @@ hr{
 }
 .about-features li {
   font-size: 1rem;
-  color: #000000;
+  color: #ffffff;
 }
 .about-features li i {
   color: #c9a84c;  /* tu color dorado */
   margin-right: 8px;
+}
+
+p{
+    color: #ccc;
+}
+
+h1,h2,h3{
+    color: #ffffff;
+}
+
+.form-group{
+    color: #ccc
+}
+
+fieldset legend {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 0 8px;
 }
 

@@ -22,7 +22,7 @@ async function mostrarRelojes() {
     const contenedor = document.getElementById('news-json');
     if (contenedor) {
         try {
-            const response = await fetch('../../data/noticias.json');
+            const response = await fetch('data/noticias.json');
             const data = await response.json();
             let html = '';
             data.forEach(item => {
@@ -44,7 +44,7 @@ mostrarRelojes();
 
 // Contact Form Handler
 document.addEventListener('DOMContentLoaded', function() {
-    const budgetForm = document.getElementById('budgetForm');
+    const budgetForm = document.getElementById('presupuestoForm');
     if (budgetForm) {
         // Calculate total on load
         calculateTotal();
@@ -57,57 +57,68 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         budgetForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Validate contact form
-            const name = document.getElementById('name').value;
-            const surname = document.getElementById('surname').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
-            
-            if (!name) {
-                showMessage('Por favor, ingresa tu nombre.', 'error');
-                return;
-            }
-            if (!surname) {
-                showMessage('Por favor, ingresa tus apellidos.', 'error');
-                return;
-            }
-            if (!phone) {
-                showMessage('Por favor, ingresa tu teléfono.', 'error');
-                return;
-            }
-            if (!email) {
-                showMessage('Por favor, ingresa tu email.', 'error');
-                return;
-            }
-            
-            const phoneRegex = /^\d+$/;
-            if (!phoneRegex.test(phone)) {
-                showMessage('Por favor, ingresa solo números en el teléfono.', 'error');
-                return;
-            }
+        e.preventDefault();
 
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                showMessage('Por favor, ingresa un email válido.', 'error');
-                return;
-            }
-            
-            // Validate budget form
-            const terms = document.getElementById('terms').checked;
-            if (!terms) {
-                showMessage('Debes aceptar los términos y condiciones.', 'error');
-                return;
-            }
-            
-            // Simulate form submission (since no backend)
-            showMessage('¡Presupuesto solicitado exitosamente! Te contactaremos pronto.', 'success');
-            // Optionally reset forms
-            document.getElementById('contactForm').reset();
-            budgetForm.reset();
-            calculateTotal();
-        });
+        const name    = document.getElementById('name').value.trim();
+        const surname = document.getElementById('surname').value.trim();
+        const phone   = document.getElementById('phone').value.trim();
+        const email   = document.getElementById('email').value.trim();
+
+       // validar nombre - solo letras, max 15
+        const nameRegex = /^[a-záéíóúüñA-ZÁÉÍÓÚÜÑ\s]+$/;
+        if (!name) {
+            showMessage('Por favor, ingresa tu nombre.', 'error'); return;
+        }
+        if (!nameRegex.test(name)) {
+            showMessage('El nombre solo puede contener letras.', 'error'); return;
+        }
+        if (name.length > 15) {
+            showMessage('El nombre no puede superar los 15 caracteres.', 'error'); return;
+        }
+
+        // --- APELLIDOS: solo letras, máximo 40 caracteres ---
+        if (!surname) {
+            showMessage('Por favor, ingresa tus apellidos.', 'error'); return;
+        }
+        if (!nameRegex.test(surname)) {
+            showMessage('Los apellidos solo pueden contener letras.', 'error'); return;
+        }
+        if (surname.length > 40) {
+            showMessage('Los apellidos no pueden superar los 40 caracteres.', 'error'); return;
+        }
+
+        // --- TELÉFONO: solo números, máximo 9 dígitos ---
+        const phoneRegex = /^\d+$/;
+        if (!phone) {
+            showMessage('Por favor, ingresa tu teléfono.', 'error'); return;
+        }
+        if (!phoneRegex.test(phone)) {
+            showMessage('El teléfono solo puede contener números.', 'error'); return;
+        }
+        if (phone.length > 9) {
+            showMessage('El teléfono no puede superar los 9 dígitos.', 'error'); return;
+        }
+
+        // --- EMAIL: formato estándar ---
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email) {
+         showMessage('Por favor, ingresa tu email.', 'error'); return;
+        }
+        if (!emailRegex.test(email)) {
+            showMessage('Por favor, ingresa un email válido.', 'error'); return;
+     }
+
+     // --- TÉRMINOS: obligatorio ---
+     const terms = document.getElementById('terms').checked;
+     if (!terms) {
+            showMessage('Debes aceptar los términos y condiciones.', 'error'); return;
+     }
+
+        // Todo correcto — mostrar éxito y resetear
+        showMessage('¡Presupuesto solicitado exitosamente! Te contactaremos pronto.', 'success');
+        budgetForm.reset();
+        calculateTotal();
+    });
     }
 });
 
@@ -158,19 +169,28 @@ const galeriaImages = [
     alt: "Reloj deportivo con cronógrafo"
   },
   {
-    src: "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=800",
-    alt: "Colección de relojes de pulsera"
-  },
-  {
     src: "https://images.unsplash.com/photo-1539874754764-5a96559165b0?w=800",
     alt: "Reloj de dama con brazalete plateado"
   },
-  {
-    src: "img/showcase_2.gif",
-    alt: "Omega Seamaster 007"
-  },
-  {
-    src: "img/showcase_3.gif",
-    alt: "Grand Seiko edición especial"
-  }
+  { src: "../img/showcase_2.gif", alt: "Omega Seamaster 007" },
+  { src: "../img/showcase_3.gif", alt: "Grand Seiko edición especial" }
 ];
+
+// Generar slides del Swiper dinámicamente desde el array
+function inicializarGaleria() {
+    const wrapper = document.querySelector('.swiper-wrapper');
+    if (!wrapper) return; // Solo ejecuta si estamos en galeria.html
+
+    // Limpiar el wrapper antes de añadir
+    wrapper.innerHTML = '';
+
+    galeriaImages.forEach(imagen => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        slide.innerHTML = `<img src="${imagen.src}" alt="${imagen.alt}">`;
+        wrapper.appendChild(slide);
+    });
+}
+
+// Llamar la función antes de inicializar Swiper
+inicializarGaleria();

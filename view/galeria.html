@@ -1,91 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- Cabecera del documento -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabajo_final_JS_Galeria</title>
-    <!-- Fuentes de iconos Font Awesome - corregido a v6.5.0 -->
+    <title>Relojeria MARACAIBO – Galería</title>
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Fuentes de Google -->
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <!-- Biblioteca Swiper - corregido a v11 para coincidir con el JS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <!-- Hoja de estilos personalizada -->
+
+    <!-- Estilos propios -->
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <!-- Botón del menú móvil -->
+
+    <!-- Botón menú móvil -->
     <div class="menu-btn">
         <i class="fas fa-bars"></i>
     </div>
 
     <!-- Contenedor principal -->
     <div class="container">
+
         <!-- Barra de navegación -->
         <nav class="nav-main">
-            <img src="../img/nav-brand.png" alt="Logo Relojeria" class="nav-brand">
+            <img src="../img/nav-brand.png" alt="Logo Relojeria MARACAIBO" class="nav-brand">
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="../index.html">Inicio</a></li>
+                    <a href="../index.html">Inicio</a>
+                </li>
                 <li class="nav-item">
-                    <a href="presupuesto.html">Presupuesto</a></li>
+                    <a href="presupuesto.html">Presupuesto</a>
+                </li>
                 <li class="nav-item">
-                    <a href="contacto.html">Contacto</a></li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
                 <li class="nav-item active">
-                    <a href="galeria.html">Galeria</a></li>
+                    <a href="galeria.html">Galería</a>
+                </li>
             </ul>
         </nav>
         <hr>
 
         <main>
             <div class="titulos">
-                <h1>Galeria</h1>
+                <h1>Galería</h1>
             </div>
             <hr>
 
-            <!-- Galería dinámica -->
-            <!-- Slider main container -->
+            <!-- galeria swiper -->
             <div class="swiper">
-                <!-- Additional required wrapper -->
+
+                <!-- Contenedor de slides — todos los slides van aquí dentro -->
                 <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide"><img src="../img/showcase_2.gif" alt="Reloj Omega Seamaster"></div>
-                    <div class="swiper-slide"><img src="../img/showcase_3.gif" alt="Reloj Grand Seiko"></div>
-                    <div class="swiper-slide"><img src="../img/nav-brand.png" alt="Logo Relojeria MARACAIBO"></div>
+    
                 </div>
-                <!-- Pagination -->
+
+                <!-- Paginación (puntos) -->
                 <div class="swiper-pagination"></div>
-                <!-- Navigation buttons -->
+
+                <!-- Botones de navegación -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-                <!-- Scrollbar -->
-                <div class="swiper-scrollbar"></div>
-            </div>
 
-            <!--BANNER-->
+                <!-- Barra de scroll -->
+                <div class="swiper-scrollbar"></div>
+
+            </div>
+            <!-- Fin div.swiper -->
+
+            <!-- Banner promocional -->
             <section class="cards-banner-one">
                 <div class="content">
                     <h2>Ofertas Especiales</h2>
-                    <p>Aprovecha nuestras ofertas exclusivas por tiempo</p>
-                    <p>limitado en relojes de lujo seleccionados.</p>
-                    <a href="presupuesto.html" class="btn-banner">Comprar Ahora <i class="fas fa-angle-double-right"></i></a>
+                    <p>Aprovecha nuestras ofertas exclusivas por tiempo limitado.</p>
+                    <a href="presupuesto.html" class="btn-banner">
+                        Comprar Ahora <i class="fas fa-angle-double-right"></i>
+                    </a>
                 </div>
             </section>
 
-            <!-- REDES SOCIALES -->
+            <!-- Redes sociales -->
             <div class="social">
                 <p>¡Síguenos en nuestras redes sociales!</p>
                 <div class="links">
-                    <a href="https://facebook.com/relojeriamaracaibo">
+                    <a href="https://facebook.com/relojeriamaracaibo" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://twitter.com/relojeriamaracaibo">
+                    <a href="https://twitter.com/relojeriamaracaibo" aria-label="Twitter">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="https://instagram.com/relojeriamaracaibo">
+                    <a href="https://instagram.com/relojeriamaracaibo" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
@@ -93,42 +105,9 @@
 
         </main>
     </div>
+    <!-- Fin div.container -->
 
-    <!-- Enlaces adicionales en el pie de página -->
-    <div class="footer-links">
-        <div class="footer-container">
-            <ul>
-                <li><a href="#"><h3>Titulo</h3></a></li>
-                <li><a href="#">Relojes</a></li>
-                <li><a href="#">Relojes</a></li>
-                <li><a href="#">Relojes</a></li>
-                <li><a href="#">Relojes</a></li>
-            </ul>
-            <ul>
-                <li><a href="#"><h3>Titulo</h3></a></li>
-                <li><a href="#">Relojes</a></li>
-                <li><a href="#">Relojes</a></li>
-                <li><a href="#">Relojes</a></li>
-                <li><a href="#">Relojes</a></li>
-            </ul>
-            <ul>
-                <li><a href="#"><h3>Titulo</h3></a></li>
-                <li><a href="#">Relojes</a></li>
-                <li><a href="#">Relojes</a></li>
-                <li><a href="#">Relojes</a></li>
-                <li><a href="#">Relojes</a></li>
-            </ul>
-            <ul>
-                <li><a href="#"><h3>Titulo</h3></a></li>
-                <li><a href="#">Relojes</a></li>
-                <li><a href="#">Relojes</a></li>
-                <li><a href="#">Relojes</a></li>
-                <li><a href="#">Relojes</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Información de copyright -->
+    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2024 Relojeria MARACAIBO. Todos los derechos reservados.</p>
         <p>Dirección: Calle Ficticia 123, Maracaibo, Venezuela</p>
@@ -136,28 +115,45 @@
         <p>Aviso legal: Este sitio es ficticio y no representa una empresa real.</p>
     </footer>
 
-    <!-- Biblioteca Scroll Reveal -->
+    <!-- ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- Biblioteca Swiper - corregido a v11 para coincidir con el CSS -->
+
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Inicialización de Swiper - añadida para correcto funcionamiento -->
+
+    <!-- Inicialización del Swiper -->
     <script>
+        // Inicializamos Swiper sobre el div.swiper que contiene todo
         const swiper = new Swiper('.swiper', {
+            // Carrusel en bucle infinito
             loop: true,
+
+            // Autoplay cada 3 segundos
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            // Paginación con puntos clicables
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
+
+            // Flechas de navegación
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+
+            // Barra de scroll
             scrollbar: {
                 el: '.swiper-scrollbar',
             },
         });
     </script>
-    <!-- JavaScript personalizado -->
+
+    <!-- JS principal (menú, ScrollReveal, etc.) -->
     <script src="../js/main.js"></script>
 
 </body>
